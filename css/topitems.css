@@ -1,0 +1,84 @@
+body{
+    display: grid;
+
+}
+
+.mainbox1{
+    display: flex;
+    width: 100%;
+    height: 450px;
+    cursor: pointer;
+    background:white;
+    flex-direction: row-reverse;
+    justify-content: space-evenly;
+    align-items: center;
+    scroll-snap-align: center;
+    
+}
+
+.topItems{
+    display: flex;
+    transition: all 1s ease-in-out;
+    width: 100%;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    transition: ease-in-out all 5s ;
+    scroll-behavior: smooth;
+    height: 100%;
+       
+}
+
+.topItems::-webkit-scrollbar{
+    display: none;
+}
+
+.name1 , .price1, .description1{
+    font-weight: lighter;
+}
+
+.name1{
+    color: rgb(217, 87, 60);
+}
+
+.topItems img {
+    height: 200px;
+    margin: 0px 100px;
+}
+
+.box1{
+    width: 50vw;;
+
+    padding: 0px 15vw;
+}
+
+
+.w3-button{
+    border: none;
+    background-color: white;
+    color: rgb(217, 87, 60);
+    font-size: 30px;
+}
+
+.w3-button:hover{
+        color: black;
+}
+
+.button-right{
+    position: absolute;
+    left: 30px;
+    top: 250px;
+}
+
+.button-left{
+    position:absolute;
+    right: 30px;
+    top: 250px;
+}
+.buyButton1{
+    border: none;
+    font-size: 15px;
+    background-color:rgb(217, 87, 60) ;
+    color: white;
+    text-align: center;
+    padding: 10px 30px;
+}

@@ -1,0 +1,76 @@
+footer{
+    background-color: white;
+    height: 200px;
+    display: flex;
+    padding: 30px;
+    justify-content: space-evenly;
+    align-items: center;
+    justify-items: center;
+}
+
+
+.information{
+    margin: 30px;
+    display: grid;
+    justify-content: center;
+    text-align: center;
+}
+
+.information h1{
+    font-size: 20px;
+    font-weight: normal;
+}
+
+.information h3{
+    font-size: 15px;
+    font-weight: lighter;
+}
+
+.webinfo{
+    font-size: 10px;
+    margin-top:40px; 
+    display: grid;
+}
+
+.webinfo h1{
+    font-size: 20px;
+}
+
+.links i {
+    font-size: 20px;
+    color:rgb(217, 87, 60);;
+    padding: 10px;
+}
+
+.hire{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    padding: 50px;
+}
+
+.hire h1{
+    font-size: 25px;
+    font-weight: normal;
+}
+.emailme{
+    width: 80%;
+    align-self: center;
+    display: grid;
+}
+
+.email, .otherthings{
+    margin: 10px;
+}
+.otherthings{
+    resize: none;
+    height: 100px;
+}
+.sendemail{
+    border: none;
+    color: white;
+    padding: 5px ;
+    background-color: rgb(217, 87, 60);
+}
+
