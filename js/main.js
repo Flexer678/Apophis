@@ -1,4 +1,4 @@
-
+import { addCart } from "./cart.js"
 let body = document.querySelector('body')
 const boxItems = document.querySelector(".items");
 let sorry = document.createElement("h1")
@@ -11,13 +11,14 @@ var sheet = window.document.styleSheets[0];
 
 
 
+
 document.querySelector(".accountbtn").addEventListener("click",()=>{
   alert("no need for an account")
 })
 
 
 
-import {addCart} from "./cart.js"
+
 
 async function data(){
   try{
