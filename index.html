@@ -29,8 +29,9 @@
                     <div class="search">
                         <li><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
                         <div class="search_input">
-                            <input type="text">
+                            <input class="search_inpuog" type="text">
                         </div>
+                        <div class="search_suggestions"></div>
                     </div>
                    
                 </div>
@@ -70,12 +71,18 @@
         </div>
         <div class="hire">
             <h1>Hire Me! or let me know you like this website</h1>
-            <div class="emailme">
-                <input class = "email" type="email" name="enter your email" id="" required placeholder="Enter your email">
-                <textarea class="otherthings" placeholder="other things you want to let me know or tell me you like it" rows="" cols="" name=""
-                    form=""></textarea>
-                <input class="sendemail" type="button" value="send">
-            </div>
+            <form action="https://formspree.io/f/mgebpznl" method="POST">
+                <label>
+                    <input type="email" name="email" name="enter your email" id="" required class = "email" placeholder="Enter your email">
+                </label>
+                <label>
+                    <textarea required class="otherthings" placeholder="other things you want to let me know or tell me you like it" rows="" cols="" name=""></textarea>
+                </label>
+                <!-- your other form fields go here -->
+                <button class="sendemail" type="submit">Send</button>
+            </form>
+
+            
         </div>
     </footer>
     <script type="module" src="js/main.js"></script>

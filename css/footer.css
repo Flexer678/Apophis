@@ -42,12 +42,18 @@ footer{
     padding: 10px;
 }
 
-.hire{
+.hire {
+    padding: 30px;
+   
+}
+
+.hire form{
     display: grid;
+    width: 100%;
     justify-content: center;
-    align-items: center;
-    justify-items: center;
-    padding: 50px;
+        align-items: center;
+        justify-items: center;
+    
 }
 
 .hire h1{
@@ -55,13 +61,14 @@ footer{
     font-weight: normal;
 }
 .emailme{
-    width: 80%;
+  
     align-self: center;
     display: grid;
 }
 
 .email, .otherthings{
     margin: 10px;
+    width: 20rem;
 }
 .otherthings{
     resize: none;
@@ -71,6 +78,7 @@ footer{
     border: none;
     color: white;
     padding: 5px ;
+    width: 20rem;
     background-color: rgb(217, 87, 60);
 }
 

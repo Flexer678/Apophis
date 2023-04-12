@@ -153,3 +153,7 @@ nav ul{
     top: 21px;
   
 }
+.search_suggestions{
+    position: absolute;
+    bottom: 20px;
+}
