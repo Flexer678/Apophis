@@ -7,7 +7,7 @@ const dropdown = document.querySelector(".dropdown-content")
 sorry.className = "errorTxt";
 sorry.innerHTML = "sorry we are unable to fetch the data \n :(";
 var sheet = window.document.styleSheets[0];
-
+const searchButton = document.querySelector(".search_button")
 
 
 
@@ -44,21 +44,32 @@ fulldata.then(value => {
 }
 )
 
+
+var inp = document.querySelector(".search_inpuog")
+
 function autocomplete(inp, arr) {
   /*the autocomplete function takes two arguments,
   the text field element and an array of possible autocompleted values:*/
   var currentFocus;
+
   /*execute a function when someone writes in the text field:*/
   inp.addEventListener("input", function (e) {
     var a, b, i, val = this.value;
+    //alert("ok")
     /*close any already open lists of autocompleted values*/
     closeAllLists();
     if (!val) { return false; }
+  
     currentFocus = -1;
     /*create a DIV element that will contain the items (values):*/
-    a = document.createElement("DIV");
-    a.setAttribute("id", this.id + "autocomplete-list");
-    a.setAttribute("class", "autocomplete-items");
+    a = document.querySelector(".search_suggestions")
+    if (inp.val == "") {
+      alert("kkk")
+      a.innerHTML = ""
+    }
+    a.innerHTML ="";
+    //a.setAttribute("id", this.id + "autocomplete-list");
+    //a.setAttribute("class", "autocomplete-items");
     /*append the DIV element as a child of the autocomplete container:*/
     this.parentNode.appendChild(a);
     /*for each item in the array...*/
@@ -69,18 +80,19 @@ function autocomplete(inp, arr) {
         b = document.createElement("DIV");
         /*make the matching letters bold:*/
         b.innerHTML = "<strong>" + arr[i].substr(0, val.length) + "</strong>";
-        b.innerHTML += arr[i].substr(val.length);
+        b.innerHTML += arr[i].substr(0,20) + "...";
         /*insert a input field that will hold the current array item's value:*/
         b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
         /*execute a function when someone clicks on the item value (DIV element):*/
         b.addEventListener("click", function (e) {
           /*insert the value for the autocomplete text field:*/
           inp.value = this.getElementsByTagName("input")[0].value;
+
           /*close the list of autocompleted values,
           (or any other open lists of autocompleted values:*/
           closeAllLists();
         });
-        document.querySelector(".search_suggestions").appendChild(b);
+       a.appendChild(b);
       }
     }
   });
@@ -140,11 +152,40 @@ function autocomplete(inp, arr) {
     closeAllLists(e.target);
   });
 }
-autocomplete(document.querySelector(".search_inpuog"), Names);
+autocomplete(inp, Names);
+
+
+searchButton.addEventListener("click", ()=>{
+  findItem(inp.value)
+})
 
 
 
 
+
+
+function findItem(name){
+  try{
+    fulldata.then(value => {
+      //console.log(value)
+      alert(name)
+      value.forEach(element => {
+        console.log(element)
+        //something happening here
+        if (element.title == name) {
+          window.localStorage.setItem('viewitem', JSON.stringify(element))
+          window.location.href = "./specificitem.html"
+        } else {
+          //console.log("notfound")
+        }
+      })
+      alert("not found")
+    })
+  }
+  catch{
+
+  }
+}
 
 
 

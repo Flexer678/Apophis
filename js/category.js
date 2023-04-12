@@ -4,6 +4,8 @@ const categorybtn = document.querySelector(".dropbtn")
 const dropdown = document.querySelector(".dropdown-content")
 const container = document.querySelector(".allitemtype")
 
+const categoryName = document.querySelector(".categoryName")
+
 
 
 
@@ -76,6 +78,7 @@ window.onload=()=>{
         notFound()
         
     } else{
+        categoryName.innerHTML =sessionStorage.getItem("categ")
         //categoryItem(category,container its stored in, cssnumber)
         categoryItem(sessionStorage.getItem("categ"), container, 2)
     }

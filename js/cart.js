@@ -36,7 +36,7 @@ function addCart(element){
     //data = data;
     sessionStorage.setItem('cart', JSON.stringify(sessionStorage.getItem("cart")),data);
     //console.log("mycart",myCart)
-    console.log("parsed", JSON.stringify(sessionStorage.getItem("cart")))
+    console.log("parsed", JSON.parse(sessionStorage.getItem("cart")))
     
     //cartnum.innerHTML = object.keys(localStorage.getItem("cart")).length
     

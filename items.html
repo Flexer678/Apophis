@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.1">
     <title>Document</title>
     <link rel="stylesheet" href="css/otheritems.css">
     <link rel="stylesheet" href="css/items.css">
@@ -16,33 +16,39 @@
         <nav>
             <ul>
                 <div class="maintitle">
-                    <li class="logo"><a href="#">Casper</a></li>
+                    <li class="logo"><a>Apophis</a></li>
                     <li><a href="index.html">Home</a></li>
                     <div>
                         <div class="dropdown">
                             <li><button class="dropbtn">categories</button></li>
-                            <div id="myDropdown" class="dropdown-content">
-                               
+                            <div class="dropdown-content">
+    
                             </div>
                         </div>
                     </div>
                     <div class="search">
-                        <li><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
+                        <li class="search_button"><button><i class="fa-solid fa-magnifying-glass"></i></button></li>
                         <div class="search_input">
-                            <input type="text">
+                            <input class="search_inpuog" type="text">
                         </div>
+                        <div class="search_suggestions"></div>
                     </div>
     
                 </div>
                 <div class="othertitle">
-                    <li><a href="#">contact</a></li>
+                    <li><a href="#footer">contacts</a></li>
                     <li class="accountbtn"><a href="#">account</a></li>
-                    <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+                    <div class="cart">
+                        <div class="cartNum"></div>
+                        <li class="cartIcon"><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    
+                    </div>
                 </div>
             </ul>
         </nav>
     </header>
     <div class="allitemtypecontainer">
+        <h1 class="categoryName"></h1>
         <div class="allitemtype"></div>
     </div>
         <footer>
