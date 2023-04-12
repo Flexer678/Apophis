@@ -167,19 +167,21 @@ searchButton.addEventListener("click", ()=>{
 function findItem(name){
   try{
     fulldata.then(value => {
+      let found = false;
       //console.log(value)
-      alert(name)
       value.forEach(element => {
         console.log(element)
         //something happening here
         if (element.title == name) {
           window.localStorage.setItem('viewitem', JSON.stringify(element))
           window.location.href = "./specificitem.html"
-        } else {
-          //console.log("notfound")
-        }
+          found = true
+        } else {}
+
       })
-      alert("not found")
+      if (found == false) {
+        alert("item not found")
+      }
     })
   }
   catch{
@@ -194,7 +196,7 @@ function findItem(name){
 async function categoryItem(category, container, cssNumber, titlenum) {
  
   fulldata.then(value => {
-    //console.log(value)
+    
     value.forEach(element => {
       //console.log(element)
       //something happening here
@@ -287,6 +289,7 @@ const delay = ms => new Promise(res => setTimeout(res, ms));
 function multipleItems(json){
     let box = document.createElement('div')
     json.then(value => {
+       
       value.forEach(element => {
         let image = document.createElement('img')
         let name = document.createElement("h1")

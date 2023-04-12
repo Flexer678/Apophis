@@ -1,20 +1,19 @@
 
 
-//import { object } from "firebase-functions/v1/storage";
-let display = document.querySelector(".cartitems")
+
+
 let cartbtn = document.querySelector(".cart")
 let cartnum = document.querySelector(".cartNum")//the number on the cart
 
 
 
-sessionStorage.setItem('cart', JSON.stringify([]));
 //localStorage.setItem('cart', myCart);
 //cartnum.innerHTML = Object.keys(myCart).length
 
 
 
 
-console.log(typeof(JSON.parse(sessionStorage.getItem("cart"))))
+//console.log(typeof(JSON.parse(sessionStorage.getItem("cart"))))
 
 
 //bodyq.style.background = "red"
@@ -30,18 +29,35 @@ function BuyItem(item){
 
 
 function addCart(element){
-    alert(element)
-    let data = JSON.stringify(element)
+    console.log(typeof(element))
+    
+    //console.log(data)
     //data.push(JSON.parse(element))
     //data = data;
-    sessionStorage.setItem('cart', JSON.stringify(sessionStorage.getItem("cart")),data);
+    //sessionStorage.setItem("cart", "")
+    if (sessionStorage.getItem("cart") == "null"){
+        sessionStorage.setItem("cart","")
+    }
+    sessionStorage.setItem("cart", sessionStorage.getItem("cart")+ element);
     //console.log("mycart",myCart)
-    console.log("parsed", JSON.parse(sessionStorage.getItem("cart")))
+    console.log("string", (sessionStorage.getItem("cart")))
+    //let data = JSON.parse(sessionStorage.getItem("cart"))
+    //console.log("hello",data.subStr(0, 569))
+    //console.log("parsed", JSON.parse(data))
+   
     
-    //cartnum.innerHTML = object.keys(localStorage.getItem("cart")).length
     
 }
 
+/*
+let display = document.querySelector(".cart-items")
+display.innerHTML = sessionStorage.getItem("cart")
+display.style.color = "bllack"
+
+*/
+
+
+//console.log(sessionStorage.getItem("cart"))
 
 //https://formsubmit.co/el/kigizi
 
