@@ -20,6 +20,18 @@ document.querySelector(".accountbtn").addEventListener("click",()=>{
 
 
 
+window.addEventListener("resize",()=>{
+    console.log(window.innerWidth)
+   if (window.innerWidth <= 1110){
+    
+       document.querySelector("body").style.display = "none"
+   }else{
+       document.querySelector("body").style.display = "grid"
+   }
+})
+
+
+
 async function data(){
   try{
     const response = await fetch('https://fakestoreapi.com/products')
